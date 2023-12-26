@@ -34,7 +34,7 @@ func netlifyRecord(r libdns.Record) netlifyDNSRecord {
 			Hostname: r.Name,
 			Value:    r.Value,
 			TTL:      int64(r.TTL.Seconds()),
-			Priority: int64(r.Priority),
+			Priority: uint(r.Priority),
 		},
 	}
 }
